@@ -1,0 +1,79 @@
+@import "../styles/mixins.scss";
+
+.formLayout {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 3rem;
+  background-color: rgb(15, 15, 65);
+  border-radius: 5px;
+  @include desktop {
+  }
+  @include laptop {
+  }
+  @include tablet {
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+  .messageLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 3rem;
+    @include desktop {
+    }
+    @include laptop {
+      padding-top: 2rem;
+    }
+    @include tablet {
+      padding-top: 1rem;
+    }
+    @include mobile {
+      padding-top: 0.5rem;
+    }
+
+    .message {
+      color: black;
+      padding: 1rem;
+      height: 100%;
+      width: 100%;
+      @include desktop {
+        font-size: 1.8rem;
+      }
+      @include laptop {
+        font-size: 1.5rem;
+      }
+      @include tablet {
+        font-size: 1.4rem;
+      }
+      @include mobile {
+        font-size: 1.3rem;
+      }
+    }
+    .message.error {
+      border-color: rgb(236, 35, 35);
+      background-color: rgb(240, 144, 144);
+    }
+    .buttonContainer {
+      flex: 1;
+      align-self: flex-end;
+    }
+  }
+  .inputContainer {
+    @include desktop {
+    }
+    @include laptop {
+    }
+    @include tablet {
+      flex: 1;
+    }
+    @include mobile {
+      flex: 1;
+    }
+  }
+}

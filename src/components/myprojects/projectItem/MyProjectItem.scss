@@ -1,0 +1,26 @@
+@import "../../../styles/mixins.scss";
+
+.projectLayout {
+  display: flex;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.212);
+  flex-direction: row;
+  background: linear-gradient(
+    to right,
+    rgba(12, 12, 37, 0.705),
+    rgba(61, 64, 122, 0.541)
+  );
+  gap: 4rem;
+  @include desktop {
+  }
+  @include laptop {
+    flex-direction: column;
+  }
+  @include tablet {
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,55 @@
+@import "../styles/mixins.scss";
+.inputLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.1rem;
+
+  .label {
+    @include desktop {
+      font-size: 2rem;
+    }
+    @include laptop {
+      font-size: 1.5rem;
+    }
+    @include tablet {
+      font-size: 1.3rem;
+    }
+    @include mobile {
+      font-size: 1.2rem;
+    }
+  }
+  .labelError {
+    color: rgb(240, 144, 144);
+    font-size: 10px;
+  }
+  .input {
+    padding: 3px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    color: black;
+    max-width: 100%;
+
+    @include desktop {
+      padding: 3px;
+      font-size: 1.8rem;
+    }
+    @include laptop {
+      padding: 3px;
+      font-size: 1.5rem;
+    }
+    @include tablet {
+      padding: 2px;
+      font-size: 1.4rem;
+    }
+    @include mobile {
+      padding: 2px;
+      font-size: 1.3rem;
+    }
+  }
+  .input.error {
+    border-color: rgb(236, 35, 35);
+    background-color: rgb(240, 144, 144);
+  }
+}

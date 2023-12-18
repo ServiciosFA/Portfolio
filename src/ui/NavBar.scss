@@ -1,0 +1,94 @@
+@import "../styles/mixins.scss";
+
+.navBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+  width: 100vw;
+  height: 7rem;
+  position: fixed;
+  background: linear-gradient(
+    to right,
+    rgb(37, 41, 46),
+    rgba(12, 12, 37, 0.932)
+  );
+
+  @include mobile {
+    justify-content: flex-start;
+    font-size: 1rem;
+  }
+
+  @include laptop {
+    font-size: 1.4rem;
+  }
+  @include tablet {
+    font-size: 1.2rem;
+  }
+
+  .navLinkContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+
+    @include mobile {
+      display: none;
+    }
+    .navLinkItem {
+      text-decoration: none;
+      color: gray;
+      font-size: larger;
+      font-weight: 500;
+      &:hover,
+      :visited,
+      :active {
+        color: white;
+        scale: 1.2;
+      }
+    }
+  }
+
+  .navLinkContainer.open {
+    @include mobile {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+
+      gap: 2rem;
+      width: fit-content;
+      background-color: rgba(12, 12, 37, 0.815);
+      color: white;
+      bottom: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  .hamburgerContainer {
+    display: none;
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      height: 100%;
+      padding: 1.5rem;
+    }
+    .hamburger {
+      width: 100%;
+      height: 100%;
+      padding: 0.3rem;
+      color: white;
+      background-color: none;
+    }
+
+    .hamburger.open {
+      background-color: rgba(12, 12, 37);
+      border-radius: 5px;
+    }
+  }
+}

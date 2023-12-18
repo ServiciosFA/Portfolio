@@ -1,0 +1,88 @@
+@import "../../styles/mixins.scss";
+
+.descriptionLayout {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  height: 100%;
+  justify-content: space-around;
+
+  .title {
+    color: rgb(230, 158, 3);
+    @include desktop {
+      font-size: 5rem;
+    }
+    @include laptop {
+      font-size: 3.3rem;
+    }
+    @include tablet {
+      font-size: 2.5rem;
+    }
+    @include mobile {
+      font-size: 2.5rem;
+    }
+  }
+  .descriptionContainer {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    .descriptionTitle {
+      font-size: 4rem;
+      font-weight: 400;
+
+      @include desktop {
+        font-size: 3rem;
+        line-height: 40px;
+      }
+      @include laptop {
+        font-size: 2.5rem;
+        line-height: 35px;
+      }
+      @include tablet {
+        font-size: 2rem;
+        line-height: 30px;
+        width: fit-content;
+        gap: 2rem;
+        padding: 1rem;
+      }
+      @include mobile {
+        font-size: 2rem;
+        color: #fffafa;
+        line-height: 30px;
+        width: fit-content;
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+    }
+    .description {
+      font-size: 2rem;
+      font-weight: 200;
+      border-radius: 5px;
+      @include desktop {
+        font-size: 2rem;
+        line-height: 40px;
+      }
+      @include laptop {
+        font-size: 1.5rem;
+        line-height: 35px;
+      }
+      @include tablet {
+        font-size: 1.5rem;
+        line-height: 30px;
+        width: fit-content;
+
+        padding: 1rem;
+      }
+      @include mobile {
+        font-size: 1.5rem;
+        color: #fffafa;
+        line-height: 30px;
+        width: fit-content;
+
+        padding: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../styles/mixins.scss";
+
+.myprojectsLayout {
+  background-color: rgb(15, 15, 65);
+  padding: 10rem;
+  width: 100%;
+
+  .myprojectsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

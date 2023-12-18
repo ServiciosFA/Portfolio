@@ -1,0 +1,49 @@
+@import "../../styles/mixins.scss";
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgb(15, 15, 65);
+  padding: 5rem 1rem 5rem 1rem;
+  gap: 1rem;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+  @include desktop {
+    font-size: 1.5rem;
+  }
+  @include laptop {
+    font-size: 1.4rem;
+  }
+  @include tablet {
+    font-size: 1.2rem;
+    flex-direction: column;
+    padding: 3rem;
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .imgContacto {
+    border-radius: 30px;
+    width: 56px;
+    height: 56px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .titleLinks {
+      padding: 0 0 1rem 0;
+    }
+  }
+  .othersLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .titleLinks {
+      padding: 0 0 1rem 0;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../styles/mixins.scss";
+.contactLayout {
+  background-color: rgb(12, 12, 37);
+  width: 100%;
+  padding: 10rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}

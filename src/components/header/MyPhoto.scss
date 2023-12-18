@@ -1,0 +1,29 @@
+@import "../../styles/mixins.scss";
+
+.photoContainer {
+  padding: 1rem;
+  flex: 1;
+  justify-self: flex-start;
+  align-self: flex-start;
+  .photo {
+    border-radius: 5%;
+    box-shadow: 2px 2px 1px 2px rgba(241, 239, 239, 0.116);
+
+    @include desktop {
+      width: 70%;
+      height: 70%;
+    }
+    @include laptop {
+      width: 70%;
+      height: 70%;
+    }
+    @include tablet {
+      width: 50%;
+      height: 50%;
+    }
+    @include mobile {
+      width: 80%;
+      height: 80%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../styles/mixins.scss";
+
+.button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: fit-content;
+  max-width: 15rem;
+  border-radius: 25px;
+  padding: 1rem;
+  color: rgba(26, 26, 97, 0.897);
+  background-color: rgb(223, 222, 222);
+  align-self: flex-start;
+  border-style: none;
+  &:hover {
+    background-color: rgb(255, 255, 255);
+    scale: 1.1;
+  }
+  &:focus {
+    color: rgba(26, 26, 97, 0.897);
+    background-color: rgb(223, 222, 222);
+  }
+
+  @include laptop {
+    padding: 0.8rem;
+  }
+  @include tablet {
+    padding: 0.6rem;
+  }
+  @include mobile {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+}
