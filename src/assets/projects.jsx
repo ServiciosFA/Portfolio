@@ -19,7 +19,7 @@ export const projects = [
     id: 1,
     name: "Trabajo Listo",
     description:
-      "Proyecto de una plataforma para contratar trabajos de profesionales realizado en NoCountry para ganar experiencia laboral",
+      "Proyecto realizado en equipo desde NoCountry, esta plataforma permite la busqueda de servicios profesionales posteados por cualquier empresa y/o emprendimiento, creando un sistema de rating y consultas por cada servicio para generar fidelidad y resposabilidad.",
     iconsUrl: [
       htmlIcon,
       tailwindIcon,
