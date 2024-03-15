@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { links } from "../assets/links";
 import { IoMdClose } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
-import logoPorfolio from "../assets/images/logoportfolio.jpg";
+import logoPorfolio from "../assets/Images/logoportfolio.jpg";
 
 const Sidebar = ({ showHambuger, setShowHamburger }) => {
   const { open, closed } = {

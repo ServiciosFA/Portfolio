@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./NavBar.scss";
-import logoPorfolio from "../assets/images/logoportfolio.jpg";
+import logoPorfolio from "../assets/Images/logoportfolio.jpg";
 import Sidebar from "./Sidebar";
 import { links } from "../assets/links";
 
