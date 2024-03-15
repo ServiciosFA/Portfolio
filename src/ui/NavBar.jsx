@@ -1,34 +1,36 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./NavBar.scss";
-import { NavLink } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+import logoPorfolio from "../assets/images/LogoPortfolio.png";
+import Sidebar from "./Sidebar";
+import { links } from "../assets/links";
 
 const NavBar = () => {
   const [showHambuger, setShowHamburger] = useState(false);
 
-  const activeHamburger = `hamburger${showHambuger ? " open" : ""}`;
   const showNavContainer = `navLinkContainer${showHambuger ? " open" : ""}`;
-
-  const hamburgerHandler = () => {
-    setShowHamburger((prevState) => !prevState);
-  };
 
   return (
     <div className="navBarContainer">
-      <div className="hamburgerContainer" onClick={hamburgerHandler}>
-        <GiHamburgerMenu className={activeHamburger}></GiHamburgerMenu>
-      </div>
-      <div className={showNavContainer}>
-        <a href="#quiensoy" className="navLinkItem">
-          Quíen soy
-        </a>
-        <a href="#projects" className="navLinkItem">
-          Proyectos
-        </a>
-        <a href="#contact" className="navLinkItem">
-          Contacto
-        </a>
-      </div>
+      <a href={"#header"}>
+        <img className="logoPorfolio" src={logoPorfolio} alt="" />
+      </a>
+      <motion.div
+        className={showNavContainer}
+        initial={{ opacity: 0, x: 200 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.5 }}
+      >
+        {links.map((link) => (
+          <a key={link.number} href={link.href} className="navLinkItem">
+            {link.text}
+          </a>
+        ))}
+      </motion.div>
+      <Sidebar
+        setShowHamburger={setShowHamburger}
+        showHambuger={showHambuger}
+      />
     </div>
   );
 };

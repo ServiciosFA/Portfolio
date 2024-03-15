@@ -20,3 +20,8 @@
     @content;
   }
 }
+@mixin bigDesktop {
+  @media screen and (min-width: 1601px) {
+    @content;
+  }
+}

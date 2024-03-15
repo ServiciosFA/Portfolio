@@ -8,10 +8,10 @@ const PhotoProject = ({ project }) => {
       <div className="photoContainer">
         <img className="photoProject" src={project.image} alt=""></img>
       </div>
-      <div className="buttonPanel">
-        {/*<a href="">
+      <div className="buttonPanel" target="_blank" rel="noopener noreferrer">
+        <a href={project.demo}>
           <Button>Demo</Button>
-  </a>*/}
+        </a>
         <a href={project.ref} target="_blank" rel="noopener noreferrer">
           <Button>Github</Button>
         </a>

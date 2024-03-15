@@ -1,14 +1,40 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./WhoIam.scss";
 import programmingImage from "../../assets/Images/image-whoIam.jpg";
 import Button from "../../ui/Button";
 import cv from "../../assets/cv/CV-Fernando Acosta.pdf";
+import { motion } from "framer-motion";
 
 const WhoIam = () => {
+  const ref = useRef();
+
+  const { initial, animate } = {
+    initial: { x: -20, opacity: 0, y: -20 },
+    animate: {
+      x: 0,
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
-    <div id="quiensoy" className="quiensoyLayout">
-      <h1 className="titleQuiensoy">Quíen soy?</h1>
-      <div className="quiensoyContainer">
+    <motion.div id="quiensoy" className="quiensoyLayout" ref={ref}>
+      <motion.h1
+        className="titleQuiensoy"
+        initial={initial}
+        whileInView={animate}
+      >
+        01. ¿Quién soy?
+      </motion.h1>
+      <motion.div
+        className="quiensoyContainer"
+        initial={initial}
+        whileInView={animate}
+      >
         <div className="imageContainer">
           <img
             className="image"
@@ -16,13 +42,13 @@ const WhoIam = () => {
             alt="ProgrammingImage"
           ></img>
         </div>
-        <div className="quiensoyTextContainer">
+        <motion.div className="quiensoyTextContainer">
           <p className="quiensoyText">
-            Un apasionado programador web junior en busca de nuevas
-            oportunidades. Mi enfoque se centra en la creación de experiencias
-            web atractivas y funcionales. Me especializo en el desarrollo con
-            HTML, CSS, JavaScript y ReactJS. He trabajado en diversos proyectos
-            personales que me han permitido aplicar y mejorar mis habilidades.
+            Un programador web junior en busca de nuevas oportunidades. Mi
+            enfoque se centra en la creación de experiencias web atractivas y
+            funcionales. Me especializo en el desarrollo con HTML, CSS,
+            JavaScript y ReactJS. He trabajado en diversos proyectos personales
+            que me han permitido aplicar y mejorar mis habilidades.
           </p>
 
           <p className="quiensoyText">
@@ -33,12 +59,14 @@ const WhoIam = () => {
             esfuerzo por mantener un equilibrio entre la creatividad y la
             eficiencia en mis soluciones.
           </p>
-          <a href={cv} download="CV-Fernando Acosta">
-            <Button>Descargar CV</Button>
-          </a>
-        </div>
-      </div>
-    </div>
+          <motion.div className="descargarcvContainer">
+            <a href={cv} download="CV-Fernando Acosta">
+              <Button>Descargar CV</Button>
+            </a>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

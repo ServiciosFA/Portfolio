@@ -16,9 +16,6 @@ const Input = ({
 
   return (
     <div className="inputLayout">
-      <label className="label" htmlFor={id}>
-        {label}
-      </label>
       <input
         className={input}
         id={id}

@@ -1,6 +1,8 @@
 @import "../../styles/mixins.scss";
 
 .aboutmeLayout {
+  overflow: hidden;
+  position: relative;
   padding: 10rem;
   display: flex;
   flex-direction: row;
@@ -8,19 +10,105 @@
   justify-content: center;
   gap: 3rem;
   width: 100%;
-
+  height: 100vh;
   background: linear-gradient(
     to right,
-    rgba(12, 12, 37, 0.705),
-    rgba(61, 64, 122, 0.541)
+    rgba(7, 0, 10, 0.705),
+    rgba(18, 18, 39, 0.541)
   );
+  @include bigDesktop {
+  }
+  @include desktop {
+  }
 
   @include laptop {
+    padding: 10rem 2rem 2rem 2rem;
   }
   @include tablet {
     flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+
+    gap: 0.5rem;
+    padding: 10rem 2rem 2rem 2rem;
   }
   @include mobile {
     flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 10rem 2rem 2rem 2rem;
+  }
+  .slidingTextContainer {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -20rem;
+
+    @include bigDesktop {
+      left: 0rem;
+    }
+    @include desktop {
+    }
+    @include tablet {
+      left: 0;
+    }
+    @include mobile {
+      left: 0;
+    }
+    .sliderText {
+      font-size: 15rem;
+      color: rgb(0, 200, 250);
+      @include bigDesktop {
+        font-size: 20rem;
+      }
+      @include desktop {
+        font-size: 15rem;
+      }
+    }
+  }
+  .slidingTextContainer2 {
+    position: absolute;
+    z-index: -1;
+    top: -5rem;
+    left: -45rem;
+    @include tablet {
+      left: -45rem;
+    }
+    @include mobile {
+      left: -45rem;
+    }
+    .sliderText {
+      color: rgb(0, 200, 250);
+      font-size: 15rem;
+      @include bigDesktop {
+        font-size: 23rem;
+      }
+      @include desktop {
+        font-size: 19rem;
+      }
+    }
+  }
+  .slidingTextContainer3 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 5rem;
+    @include tablet {
+      left: 0;
+    }
+    @include mobile {
+      left: 0;
+    }
+    .sliderText {
+      color: rgb(0, 200, 250);
+      font-size: 15rem;
+      @include bigDesktop {
+        font-size: 21rem;
+      }
+      @include desktop {
+        font-size: 17rem;
+      }
+    }
   }
 }

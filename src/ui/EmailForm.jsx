@@ -140,7 +140,7 @@ const EmailForm = () => {
       </div>
       <div className="messageLayout">
         <textarea
-          placeholder="Mensaje"
+          placeholder="Mensaje..."
           id="message"
           name="message"
           className={messageHasError ? "message error" : "message"}

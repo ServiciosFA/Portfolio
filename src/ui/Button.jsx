@@ -3,7 +3,7 @@ import "./Button.scss";
 
 const Button = ({ styles, children, disabled }) => {
   return (
-    <button disabled={disabled ? true : false} className={`button`}>
+    <button className={"buttonGlobal"} disabled={disabled ? true : false}>
       {children}
     </button>
   );

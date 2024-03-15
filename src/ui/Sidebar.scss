@@ -1,0 +1,109 @@
+@import "../styles/mixins.scss";
+.modalSidebar {
+  display: none;
+  @include tablet {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.555);
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+  }
+  @include mobile {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.555);
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+  }
+  .sidebarLinksContainer {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      height: 100vh;
+      width: 50vw;
+      gap: 5rem;
+      color: rgb(12, 12, 37);
+      position: fixed;
+      background-color: white;
+      z-index: 150;
+      left: 0;
+    }
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      height: 100vh;
+      width: 50vw;
+      gap: 5rem;
+      color: rgb(12, 12, 37);
+      position: fixed;
+      background-color: white;
+      z-index: 99;
+      left: 0;
+    }
+    .sideLinkItem {
+      color: rgb(12, 12, 37);
+      font-weight: 600;
+      font-size: large;
+      @include tablet {
+        font-weight: 600;
+        font-size: x-large;
+      }
+      @include mobile {
+        font-weight: 500;
+        font-size: large;
+      }
+    }
+    .hamburgerContainer {
+      display: none;
+      align-self: flex-start;
+
+      @include tablet {
+        position: absolute;
+        display: flex;
+        top: -4px;
+        left: 12px;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 8rem;
+      }
+      @include mobile {
+        top: 20px;
+        left: 12px;
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        height: 3rem;
+      }
+      .logoPorfolioham {
+        width: 8rem;
+        height: 8rem;
+      }
+      .hamburger {
+        width: 3rem;
+        height: 3rem;
+        left: 2rem;
+        z-index: 100;
+        color: rgb(12, 12, 37);
+        background-color: none;
+      }
+      .hamburger.open {
+        color: rgb(12, 12, 37);
+      }
+    }
+  }
+}
