@@ -34,8 +34,8 @@ const Header = () => {
         <GiCometSpark className="sliderText"> </GiCometSpark>
       </motion.div>
       <motion.div
-        initial={{ opacity: 0, x: "-12%", y: "-300%" }}
-        animate={{ opacity: 1, x: "1700%", y: "1000%" }}
+        initial={{ opacity: 0, x: "250%", y: "-300%" }}
+        animate={{ opacity: 1, x: "1500%", y: "1000%" }}
         transition={{ duration: 40, repeat: Infinity }}
         className="slidingTextContainer3"
       >
